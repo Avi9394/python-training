@@ -35,7 +35,7 @@ class CellTest(unittest.TestCase):
                     6, 6, 6, 7, 7, 7, 8, 8, 8,
                     6, 6, 6, 7, 7, 7, 8, 8, 8,
                     6, 6, 6, 7, 7, 7, 8, 8, 8]
-        positions = [(row, col) for col in range(9) for row in range(9)]
+        positions = [(row, col) for row in range(9) for col in range(9)]
         for value, position in zip(expected, positions):
             cell = Cell(position)
             self.assertEqual(value, cell.block())
